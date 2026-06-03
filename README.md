@@ -3,22 +3,8 @@
 A modern and responsive Coffee Shop Landing Page built using HTML, CSS, and JavaScript. This project showcases an attractive user interface, smooth navigation, and a mobile-friendly design to provide an engaging user experience for coffee lovers.
 
 ## 🌐 Live Demo
+[View Live Demo]file:///C:/Users/Dell/Downloads/coffe/index.html
 
-[View Live Demo](https://your-github-pages-link-here)
-
-## 📸 Screenshots
-
-### Home Page
-
-![Home Page](screenshots/home.png)
-
-### Featured Coffee Section
-
-![Featured Coffee](screenshots/featured.png)
-
-### Mobile View
-
-![Mobile View](screenshots/mobile.png)
 
 ## ✨ Features
 
