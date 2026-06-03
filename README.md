@@ -52,21 +52,6 @@ Coffee_Landing_Page/
 └── README.md
 ```
 
-## 🚀 Getting Started
-
-1. Clone the repository:
-
-```bash
-git clone https://github.com/abhireddy2268/Coffee_Landing_Page.git
-```
-
-2. Navigate to the project folder:
-
-```bash
-cd Coffee_Landing_Page
-```
-
-3. Open `index.html` in your browser.
 
 ## 📈 Future Improvements
 
