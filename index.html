@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Coffee — Make your day great</title>
+<link rel="stylesheet" href="styles.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+<header class="header">
+  <nav class="navbar container">
+    <a href="#home" class="nav-logo"><i class="fa-solid fa-mug-saucer"></i> Coffee</a>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="#home" class="nav-link">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#menu" class="nav-link">Menu</a></li>
+      <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+      <li><a href="#gallery" class="nav-link">Gallery</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+      <li>
+        <button class="close-btn" id="closeBtn" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+      </li>
+    </ul>
+    <button class="cart-btn" id="cartBtn" aria-label="Cart">
+      <i class="fa-solid fa-bag-shopping"></i>
+      <span class="cart-count" id="cartCount">0</span>
+    </button>
+    <button class="menu-btn" id="menuBtn"><i class="fa-solid fa-bars"></i></button>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <div class="container hero-content">
+    <div class="hero-text">
+      <span class="hero-tag">Best Coffee</span>
+      <h1>Make your day great with our special coffee!</h1>
+      <p>Welcome to our coffee paradise, where every bean tells a story and every cup sparks joy.</p>
+      <div class="hero-buttons">
+        <a href="#menu" class="btn btn-primary">Order Now</a>
+        <a href="#contact" class="btn btn-outline">Contact Us</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="coffee-hero-section.png" alt="Coffee cup splash" />
+    </div>
+  </div>
+</section>
+
+<section class="about section" id="about">
+  <div class="container about-grid">
+    <div class="about-image">
+      <img src="about-image.jpg" alt="Friends at a coffee shop" />
+    </div>
+    <div class="about-content">
+      <h2 class="section-title">About Us</h2>
+      <p>At Coffee House in Berndorf, Germany, we pride ourselves on being a go-to destination for coffee lovers and conversation seekers alike. We're dedicated to providing an exceptional coffee experience in a cozy and inviting atmosphere, where guests can relax, unwind, and enjoy their time in comfort.</p>
+      <div class="socials">
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="menu section dark" id="menu">
+  <div class="container">
+    <h2 class="section-title light">Our Menu</h2>
+    <div class="menu-grid">
+      <div class="menu-card"><img src="hot-beverages.png" alt=""><h3>Hot Beverages</h3><p>Wide range of steaming hot coffee to make you fresh and light.</p></div>
+      <div class="menu-card"><img src="cold-beverages.png" alt=""><h3>Cold Beverages</h3><p>Creamy and frothy cold coffee to make you cool.</p></div>
+      <div class="menu-card"><img src="refreshment.png" alt=""><h3>Refreshment</h3><p>Fruit and icy refreshing drinks to make you feel refreshed.</p></div>
+      <div class="menu-card"><img src="special-combo.png" alt=""><h3>Special Combos</h3><p>Your favorite eating and drinking combinations.</p></div>
+      <div class="menu-card"><img src="desserts.png" alt=""><h3>Dessert</h3><p>Satiate your palate and take you on a culinary treat.</p></div>
+      <div class="menu-card"><img src="burger-frenchfries.png" alt=""><h3>Burger & French Fries</h3><p>Quick bites to satisfy your small size hunger.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Cart drawer -->
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+  <div class="cart-head">
+    <h3>Your Cart</h3>
+    <button class="cart-close" id="cartClose"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-foot">
+    <div class="cart-total"><span>Total</span><span id="cartTotal">$0.00</span></div>
+    <button class="btn btn-primary" id="checkoutBtn">Checkout</button>
+  </div>
+</aside>
+<div class="toast" id="toast"></div>
+
+<section class="testimonials section" id="testimonials">
+  <div class="container">
+    <h2 class="section-title">Testimonials</h2>
+    <div class="slider">
+      <button class="slider-btn prev" id="prevBtn"><i class="fa-solid fa-chevron-left"></i></button>
+      <div class="slider-viewport">
+        <div class="slider-track" id="sliderTrack">
+          <div class="testimonial"><img src="user-1.jpg" alt=""><h4>Sarah Johnson</h4><p>"Loved the French roast. Perfectly balanced and rich. Will order again!"</p></div>
+          <div class="testimonial"><img src="user-2.jpg" alt=""><h4>James Wilson</h4><p>"Great espresso blend! Smooth and bold flavor. Fast shipping too!"</p></div>
+          <div class="testimonial"><img src="user-3.jpg" alt=""><h4>Michael Brown</h4><p>"Fantastic mocha flavor. Fresh and aromatic. Quick shipping!"</p></div>
+          <div class="testimonial"><img src="user-4.jpg" alt=""><h4>Emily Davis</h4><p>"Cozy vibe and the cold brew is the best in town. Highly recommend."</p></div>
+          <div class="testimonial"><img src="user-5.jpg" alt=""><h4>Daniel Lee</h4><p>"The baristas are amazing and the coffee is consistently excellent."</p></div>
+        </div>
+      </div>
+      <button class="slider-btn next" id="nextBtn"><i class="fa-solid fa-chevron-right"></i></button>
+      <div class="dots" id="dots"></div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery section" id="gallery">
+  <div class="container">
+    <h2 class="section-title">Gallery</h2>
+    <div class="gallery-grid">
+      <img src="gallery-1.jpg" alt="">
+      <img src="gallery-2.jpg" alt="">
+      <img src="gallery-3.jpg" alt="">
+      <img src="gallery-4.jpg" alt="">
+      <img src="gallery-5.jpg" alt="">
+      <img src="gallery-6.jpg" alt="">
+    </div>
+  </div>
+</section>
+
+<section class="contact section" id="contact">
+  <div class="container">
+    <h2 class="section-title">Contact Us</h2>
+    <div class="contact-grid">
+      <ul class="contact-info">
+        <li><i class="fa-solid fa-location-crosshairs"></i> 123 Campsite Avenue, Wilderness, CA 98765</li>
+        <li><i class="fa-solid fa-envelope"></i> info@coffeeshopwebsite.com</li>
+        <li><i class="fa-solid fa-phone"></i> (123) 456-78909</li>
+        <li><i class="fa-regular fa-clock"></i> Monday – Friday: 9:00 AM – 5:00 PM</li>
+        <li><i class="fa-regular fa-clock"></i> Saturday: 10:00 AM – 3:00 PM</li>
+        <li><i class="fa-regular fa-clock"></i> Sunday: Closed</li>
+        <li><i class="fa-solid fa-globe"></i> www.coffeeshopwebsite.com</li>
+      </ul>
+      <form class="contact-form" id="contactForm">
+        <input type="text" placeholder="Your name" required>
+        <input type="email" placeholder="Your email" required>
+        <textarea placeholder="Your message" rows="5" required></textarea>
+        <button type="submit" class="btn btn-dark">Submit</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <p>© 2026 Coffee Shop</p>
+    <div class="socials">
+      <a href="#"><i class="fa-brands fa-facebook"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+    </div>
+    <p><a href="#">Privacy policy</a> &nbsp;•&nbsp; <a href="#">Refund policy</a></p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
